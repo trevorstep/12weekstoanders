@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Program - 12 Weeks to Anders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/program.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-logo">12 WEEKS TO ANDERS</div>
+      <button class="hamburger"><i data-lucide="menu"></i></button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="program.html" class="active">Program</a>
+        <a href="dashboard.html" data-auth="dashboard" style="display:none;">Dashboard</a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="#" onclick="logoutUser()" data-auth="logout" style="display:none;">Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="program-hero reveal">
+    <div class="container">
+      <h1 style="font-size:4rem; color:var(--color-primary);">THE PROGRAM</h1>
+      <p style="font-size:1.2rem;">12 Weeks. 3 Days/Week. One Legendary Outcome.</p>
+    </div>
+  </header>
+
+  <section class="container" style="padding: 40px 20px;">
+    <div class="progress-container reveal">
+      <div style="display:flex; justify-content:space-between; font-family:var(--font-heading);">
+        <span>Your Progress</span>
+        <span>Week 1 of 12</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 8.33%;"></div>
+      </div>
+    </div>
+
+    <div id="program-container"></div>
+  </section>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script src="js/program.js"></script>
+</body>
+</html>

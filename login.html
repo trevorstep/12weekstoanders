@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - 12 Weeks to Anders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .login-wrapper {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to top right, var(--color-dark), var(--color-red-dark));
+      padding: 20px;
+    }
+    .login-card {
+      background: var(--color-mid);
+      padding: 50px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      border-top: 4px solid var(--color-primary);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-card reveal active">
+      <div class="nav-logo" style="margin-bottom:20px; color:var(--color-primary);">12 WEEKS TO ANDERS</div>
+      <h1 style="font-size:2.5rem; margin-bottom:15px;">Join the Movement.</h1>
+      <p class="text-muted" style="margin-bottom:40px;">Sign in to track your progress, log workouts, and claim your rightful place among the glute elite.</p>
+      
+      <button onclick="loginWithGoogle()" class="btn btn-primary" style="width:100%; justify-content:center; gap:10px;">
+        <i data-lucide="mail"></i> Sign in with Google
+      </button>
+      <p class="text-muted" style="margin-top:20px; font-size:0.85rem;">Your data is stored securely. Anders is watching. Proudly.</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12 Weeks to Anders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <!-- SVG Filter for Distress Effect -->
+  <svg style="width:0;height:0;position:absolute;">
+    <filter id="distress">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-logo">12 WEEKS TO ANDERS</div>
+      <button class="hamburger"><i data-lucide="menu"></i></button>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="program.html">Program</a>
+        <a href="dashboard.html" data-auth="dashboard" style="display:none;">Dashboard</a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="#" onclick="logoutUser()" data-auth="logout" style="display:none;">Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: Hero -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <canvas id="fire-canvas"></canvas>
+    <div class="container hero-content">
+      <h1 class="hero-title hero-stagger">12 WEEKS TO <span>ANDERS</span></h1>
+      <h2 class="hero-stagger" style="margin-bottom:20px;">Build Your Badonkadonk.</h2>
+      <p class="hero-stagger" style="font-size:1.2rem; margin-bottom:40px; max-width:600px;">
+        You simply cannot shake what your mama gave you if you don't have anything to shake. This 12-week program is here to fix that. Science-backed. Anders-approved. Absolutely ridiculous.
+      </p>
+      <a href="program.html" class="btn btn-primary hero-stagger">START TODAY &rarr;</a>
+    </div>
+  </header>
+
+  <!-- SECTION 2: What Is This? -->
+  <section class="section container reveal">
+    <div class="stats-grid">
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="stat-item"><span class="stat-val counter-val" data-target="12">0</span> Weeks</div>
+        <div class="stat-item"><span class="stat-val counter-val" data-target="3">0</span> Days/Week</div>
+        <div class="stat-item"><span class="stat-val counter-val" data-target="36">0</span> Total Workouts</div>
+        <div class="stat-item"><span class="stat-val">&infin;</span> Badonkadonk Potential</div>
+      </div>
+      <div style="display:flex; align-items:center;">
+        <p style="font-size:1.2rem;">Three days a week. Twelve weeks. Real exercises, real gains, and an embarrassing amount of motivation from a guy named Anders. Whether you're starting from flat or just want to upgrade what you've got — this program delivers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Why Anders? -->
+  <section class="section slash-bg text-center reveal">
+    <div class="container">
+      <h2 style="font-size:3rem; margin-bottom:20px;">Why is it called 12 Weeks to Anders?</h2>
+      <p style="max-width:700px; margin:0 auto; font-size:1.1rem;">Because Anders has, and we say this with love, an absolutely legendary posterior. Whether genetics, hard work, or divine intervention, we'll never know. What we DO know is that this program is dedicated to helping you achieve similar greatness. This is not a drill. This is glute science.</p>
+      <!-- Replace with Anders photo -->
+      <div class="anders-placeholder">🔥</div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Program Highlights -->
+  <section class="section container reveal">
+    <h2 class="text-center" style="font-size:3rem;">Program Highlights</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i data-lucide="dumbbell" size="32"></i>
+        <h3>🍑 Real Exercises</h3>
+        <p class="text-muted mt-2">Squats, hip thrusts, Romanian deadlifts — the full arsenal. No nonsense.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="trending-up" size="32"></i>
+        <h3>📈 Progressive Overload</h3>
+        <p class="text-muted mt-2">Each week builds on the last. Your glutes will have no choice but to grow.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="book" size="32"></i>
+        <h3>📓 Built-In Tracker</h3>
+        <p class="text-muted mt-2">Log your workouts, track your weight, and journal your feelings. We don't judge.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="badge-check" size="32"></i>
+        <h3>🔥 Anders-Certified™</h3>
+        <p class="text-muted mt-2">Verified by someone with a great butt. Qualifications don't get more legitimate.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="smartphone" size="32"></i>
+        <h3>📱 Mobile First</h3>
+        <p class="text-muted mt-2">Built for your phone. Do it in the gym, on the couch, or hiding in the bathroom.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="calendar" size="32"></i>
+        <h3>💪 3 Days/Week</h3>
+        <p class="text-muted mt-2">Sustainable. Effective. Leaves 4 days for rest, recovery, and telling people you work out.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Testimonials -->
+  <section class="section container reveal">
+    <h2 class="text-center" style="font-size:3rem; margin-bottom:40px;">Hear From Our Students</h2>
+    <div class="testimonials-wrapper">
+      <div class="test-card">
+        <i data-lucide="quote" style="color:var(--color-primary); margin-bottom:15px;"></i>
+        <p style="font-style:italic; margin-bottom:20px;">"I've never felt so seen. My glutes have never been so activated. Anders changed my life."</p>
+        <strong>— Bryson T., Rexburg ID</strong>
+      </div>
+      <div class="test-card">
+        <i data-lucide="quote" style="color:var(--color-primary); margin-bottom:15px;"></i>
+        <p style="font-style:italic; margin-bottom:20px;">"I didn't believe in the program at first. Then I looked in the mirror. Now I believe."</p>
+        <strong>— Madison K., Somewhere USA</strong>
+      </div>
+      <div class="test-card">
+        <i data-lucide="quote" style="color:var(--color-primary); margin-bottom:15px;"></i>
+        <p style="font-style:italic; margin-bottom:20px;">"It's called 12 Weeks to Anders but honestly? I think I surpassed him."</p>
+        <strong>— Anonymous (coward)</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CTA -->
+  <section class="section cta-banner text-center reveal">
+    <div class="container">
+      <h2 style="font-size:4rem; margin-bottom:10px;">YOU CAN DO THIS.</h2>
+      <p style="font-size:1.2rem; margin-bottom:30px;">Start the program. Track your progress. Build your legacy.</p>
+      <a href="login.html" class="btn btn-white">GET STARTED &rarr;</a>
+    </div>
+  </section>
+
+  <!-- SECTION 7: Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="nav-logo">12 WEEKS TO ANDERS</div>
+      <div style="display:flex; gap:20px;">
+        <a href="index.html">Home</a> | <a href="program.html">Program</a> | <a href="login.html">Login</a>
+      </div>
+      <p class="text-muted text-center" style="font-size:0.9rem;">&copy; 2026 12 Weeks to Anders. No glutes were harmed in the making of this program.</p>
+      <p class="text-muted" style="font-size:0.8rem;">www.reallygreatsite.com</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script type="module" src="js/auth.js"></script>
+  <script src="js/landing.js"></script>
+</body>
+</html>

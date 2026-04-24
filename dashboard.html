@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - 12 Weeks to Anders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-logo">12 WEEKS TO ANDERS</div>
+      <button class="hamburger"><i data-lucide="menu"></i></button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="program.html">Program</a>
+        <a href="dashboard.html" class="active" data-auth="dashboard">Dashboard</a>
+        <a href="#" onclick="logoutUser()" data-auth="logout">Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container dashboard-layout">
+    <div class="dash-header">
+      <div class="user-profile">
+        <img id="user-photo" src="" alt="Profile">
+        <div>
+          <h2 id="user-name">Athlete</h2>
+          <span class="text-muted">Week 1 of 12</span>
+        </div>
+      </div>
+      <button onclick="logoutUser()" class="btn btn-white" style="padding: 10px 20px; font-size:1rem;">Sign Out</button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('tab-workout')">Workout</button>
+      <button class="tab-btn" onclick="switchTab('tab-weight')">Weight</button>
+      <button class="tab-btn" onclick="switchTab('tab-journal')">Journal</button>
+    </div>
+
+    <!-- TAB 1: Workout -->
+    <div id="tab-workout" class="tab-content active">
+      <h2 style="margin-bottom:20px;">Today's Mission</h2>
+      <div style="background:var(--color-mid); padding:30px; text-align:center;">
+        <i data-lucide="clipboard-check" size="48" style="color:var(--color-primary); margin-bottom:20px;"></i>
+        <p>Ready to build the badonkadonk?</p>
+        <button class="btn btn-primary" style="margin-top:20px;">Log Today's Workout</button>
+      </div>
+    </div>
+
+    <!-- TAB 2: Weight -->
+    <div id="tab-weight" class="tab-content">
+      <h2 style="margin-bottom:20px;">Glute Mass Tracker</h2>
+      <div style="display:flex; gap:10px; margin-bottom:30px;">
+        <input type="number" placeholder="Enter today's weight (lbs)" style="flex:1;">
+        <button class="btn btn-primary">Save</button>
+      </div>
+      <div style="background:var(--color-mid); padding:20px;">
+        <canvas id="weightChart"></canvas>
+      </div>
+    </div>
+
+    <!-- TAB 3: Journal -->
+    <div id="tab-journal" class="tab-content">
+      <h2 style="margin-bottom:20px;">Captains Log</h2>
+      <textarea rows="5" placeholder="How are you feeling today? What went well? What's your butt up to?"></textarea>
+      <button class="btn btn-primary" style="margin-top:15px;">Save Entry</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
